@@ -1,0 +1,22 @@
+.input-text {
+  line-height: 21px;
+  font-weight: 400;
+
+  &__input {
+    &::placeholder {
+      color: $primary;
+      font-size: $input-font-size;
+    }
+  }
+
+  &__label {
+    cursor: pointer;
+
+    &__txt {
+      color: $additional;
+      display: inline-block;
+      font-size: 15px;
+      padding-bottom: 14px;
+    }
+  }
+}

@@ -1,0 +1,57 @@
+.profile {
+  width: 100%;
+  margin-top: 12px;
+  max-width: map_get($grid-breakpoints, 'xl');
+
+  &__name {
+    margin: 0 0 16px;
+    font-size: 28px;
+    text-shadow: 2px 2px 4px white;
+    text-decoration: underline;
+  }
+
+  &__info {
+    @include lg {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__group {
+    border: 1px solid transparentize(white, 0.25);
+    padding: 8px;
+    box-shadow: 0 0 4px white;
+    margin-bottom: 12px;
+    border-radius: $border-radius;
+    background-color: transparentize(white, 0.5);
+
+    @include sm {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    @include lg {
+      width: calc(100% / 3 - 16px);
+      display: block;
+    }
+
+    &__title {
+      width: 100%;
+      margin: 0 0 8px;
+      font-size: 22px;
+    }
+  }
+
+  &__item {
+    margin-bottom: 4px;
+
+    @include sm {
+      min-width: 50%;
+      padding-right: 8px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

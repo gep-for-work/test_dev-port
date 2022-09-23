@@ -1,0 +1,22 @@
+.btn {
+  width: 100%;
+  cursor: pointer;
+  border: none;
+  padding: 10px;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 21px;
+  border-radius: $border-radius;
+
+  &[type='submit'] {
+    color: white;
+    border: 1px solid transparent;
+    background-color: $success;
+
+    @include hover {
+      box-shadow: 4px 4px 10px $success;
+      transition: $transition;
+      border-color: white;
+    }
+  }
+}

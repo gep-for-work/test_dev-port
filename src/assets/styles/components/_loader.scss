@@ -1,0 +1,73 @@
+.loader {
+  $size: 80px;
+  $half-size: calc($size / 2);
+  $border-size: 4px;
+
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  &__blackout {
+    width: 100%;
+    height: 100%;
+    cursor: wait;
+    z-index: 1;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    background-color: transparentize($additional, 0.5);
+  }
+
+  &__animation {
+    width: $size;
+    height: $size;
+    display: inline-block;
+    position: absolute;
+
+    &:before,
+    &:after {
+      border: $border-size solid white;
+      content: '';
+      display: block;
+      opacity: 1;
+      position: absolute;
+      animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+      border-radius: 50%;
+    }
+    &:after {
+      animation-delay: -0.5s;
+    }
+  }
+
+  @keyframes lds-ripple {
+    0% {
+      top: calc($half-size - $border-size);
+      left: calc($half-size - $border-size);
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+    4.9% {
+      top: calc($half-size - $border-size);
+      left: calc($half-size - $border-size);
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+    5% {
+      top: calc($half-size - $border-size);
+      left: calc($half-size - $border-size);
+      width: 0;
+      height: 0;
+      opacity: 1;
+    }
+    100% {
+      top: 0;
+      left: 0;
+      width: calc($size - $border-size * 2);
+      height: calc($size - $border-size * 2);
+      opacity: 0;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.form {
+  &-item {
+    display: block;
+    position: relative;
+    padding-bottom: 20px;
+  }
+
+  &-input {
+    width: 100%;
+    color: $primary;
+    cursor: pointer;
+    border: 1px solid transparent;
+    padding: 10px;
+    display: block;
+    font-size: $input-font-size;
+    border-radius: $border-radius;
+    background-color: white;
+
+    @include hover-and-focus {
+      transition: $transition;
+      box-shadow: 4px 4px 12px white;
+      border-color: $primary;
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+    }
+  }
+
+  &-error {
+    color: $error;
+    position: absolute;
+  }
+}
+
+@import 'text';

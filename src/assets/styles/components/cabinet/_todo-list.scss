@@ -1,0 +1,55 @@
+.todo-list {
+  $btn-size: 1.25em;
+
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 12px;
+  list-style: none;
+
+  &__item {
+    border: 1px solid transparentize(white, 0.5);
+    margin: 0 6px 6px 0;
+    padding: 8px $btn-size * 1.25 8px 8px;
+    position: relative;
+    border-radius: $border-radius;
+    background-color: transparentize(white, 0.75);
+
+    &--favorite {
+      .todo-list {
+        &__favorite-btn {
+          color: gold;
+
+          @include hover {
+            color: $error;
+            transition: $transition;
+          }
+        }
+      }
+    }
+
+    &--completed {
+      border: 1px solid transparentize($success, 0.25);
+      background-color: transparentize($success, 0.75);
+    }
+  }
+
+  &__field {
+    margin-bottom: 2px;
+  }
+
+  &__favorite-btn {
+    top: 0;
+    right: 0;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    font-size: $btn-size;
+    background-color: transparent;
+
+    @include hover {
+      color: gold;
+      transition: $transition;
+    }
+  }
+}

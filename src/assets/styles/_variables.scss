@@ -1,0 +1,18 @@
+$error: red;
+$success: #519945;
+$primary: #353535;
+$additional: #5f5f5f;
+$transition: 0.5s;
+$border-radius: 5px;
+$input-font-size: 17px;
+
+$grid-breakpoints: (
+  xs: 0px,
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xlm: 1280px,
+  xxl: 1440px,
+  xxxl: 1600px,
+);

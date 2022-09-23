@@ -1,0 +1,96 @@
+@mixin hover() {
+  @media (hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+@mixin hover-and-focus() {
+  &:focus {
+    @content;
+  }
+
+  @include hover {
+    @content;
+  }
+}
+
+// Media breakpoints
+@mixin xs-down {
+  @media screen and (max-width: map_get($grid-breakpoints, 'xs')) {
+    @content;
+  }
+}
+
+@mixin sm-down {
+  @media screen and (max-width: map_get($grid-breakpoints, 'sm')) {
+    @content;
+  }
+}
+
+@mixin md-down {
+  @media screen and (max-width: map_get($grid-breakpoints, 'md')) {
+    @content;
+  }
+}
+
+@mixin lg-down {
+  @media screen and (max-width: map_get($grid-breakpoints, 'lg')) {
+    @content;
+  }
+}
+
+@mixin xl-down {
+  @media screen and (max-width: map_get($grid-breakpoints, 'xl')) {
+    @content;
+  }
+}
+
+@mixin xxl-down {
+  @media screen and (max-width: map_get($grid-breakpoints, 'xxl')) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media screen and (min-width: map_get($grid-breakpoints, 'sm')) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media screen and (min-width: map_get($grid-breakpoints, 'md')) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media screen and (min-width: map_get($grid-breakpoints, 'lg')) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media screen and (min-width: map_get($grid-breakpoints, 'xl')) {
+    @content;
+  }
+}
+
+@mixin xlm {
+  @media screen and (min-width: map_get($grid-breakpoints, 'xlm')) {
+    @content;
+  }
+}
+
+@mixin xxl {
+  @media screen and (min-width: map_get($grid-breakpoints, 'xxl')) {
+    @content;
+  }
+}
+
+@mixin xxxl {
+  @media screen and (min-width: map_get($grid-breakpoints, 'xxxl')) {
+    @content;
+  }
+}

@@ -1,0 +1,48 @@
+@mixin _initial-state() {
+  &-leave-to,
+  &-enter-from {
+    @content;
+  }
+}
+
+@mixin _animated-state() {
+  &-enter-to,
+  &-leave-from {
+    @content;
+  }
+}
+
+.v {
+  @include _initial-state {
+    opacity: 0;
+  }
+
+  @include _animated-state {
+    opacity: 1;
+    transition: opacity $transition;
+  }
+}
+
+.to-top {
+  @include _initial-state {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  @include _animated-state {
+    opacity: 1;
+    transform: translateY(0);
+    transition: $transition;
+  }
+}
+
+.scale {
+  @include _initial-state {
+    transition: $transition;
+    transform: scale(1);
+  }
+
+  @include _animated-state {
+    transform: scale(0);
+  }
+}
