@@ -19,4 +19,5 @@ export default defineConfig({
     },
     devSourcemap: true,
   },
+  base: 'test_dev-port'
 });
