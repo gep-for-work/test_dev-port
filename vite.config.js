@@ -19,5 +19,5 @@ export default defineConfig({
     },
     devSourcemap: true,
   },
-  base: 'test_dev-port'
+  base: 'test_dev-port/dist'
 });
